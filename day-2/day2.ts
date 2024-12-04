@@ -1,5 +1,6 @@
+import { EOL } from "@std/fs/eol";
 const reportsList = Deno.readTextFileSync("day-2/reports.txt");
-const reports = reportsList.split("\r\n");
+const reports = reportsList.split(EOL);
 
 function day2(reports: string[]): number {
   let safeReports = 0;
