@@ -7,7 +7,7 @@ Maybe you can work out where the guard will go ahead of time so that The Histori
 
 You start by making a map (your puzzle input) of the situation. For example:
 
-``
+```
 ....#.....
 .........#
 ..........
@@ -18,7 +18,7 @@ You start by making a map (your puzzle input) of the situation. For example:
 ........#.
 #.........
 ......#...
-``
+```
 
 The map shows the current position of the guard with ^ (to indicate the guard is currently facing up from the perspective of the map). Any obstructions - crates, desks, alchemical reactors, etc. - are shown as #.
 
@@ -28,7 +28,7 @@ If there is something directly in front of you, turn right 90 degrees.
 Otherwise, take a step forward.
 Following the above protocol, the guard moves up several times until she reaches an obstacle (in this case, a pile of failed suit prototypes):
 
-``
+```
 ....#.....
 ....^....#
 ..........
@@ -39,11 +39,11 @@ Following the above protocol, the guard moves up several times until she reaches
 ........#.
 #.........
 ......#...
-``
+```
 
 Because there is now an obstacle in front of the guard, she turns right before continuing straight in her new facing direction:
 
-``
+```
 ....#.....
 ........>#
 ..........
@@ -54,11 +54,11 @@ Because there is now an obstacle in front of the guard, she turns right before c
 ........#.
 #.........
 ......#...
-``
+```
 
 Reaching another obstacle (a spool of several very long polymers), she turns right again and continues downward:
 
-``
+```
 ....#.....
 .........#
 ..........
@@ -69,11 +69,11 @@ Reaching another obstacle (a spool of several very long polymers), she turns rig
 ........#.
 #.........
 ......#...
-``
+```
 
 This process continues for a while, but the guard eventually leaves the mapped area (after walking past a tank of universal solvent):
 
-``
+```
 ....#.....
 .........#
 ..........
@@ -84,11 +84,11 @@ This process continues for a while, but the guard eventually leaves the mapped a
 ........#.
 #.........
 ......#v..
-``
+```
 
 By predicting the guard's route, you can determine which specific positions in the lab will be in the patrol path. Including the guard's starting position, the positions visited by the guard before leaving the area are marked with an X:
 
-``
+```
 ....#.....
 ....XXXXX#
 ....X...X.
@@ -99,7 +99,7 @@ By predicting the guard's route, you can determine which specific positions in t
 .XXXXXXX#.
 #XXXXXXX..
 ......#X..
-``
+```
 
 In this example, the guard will visit 41 distinct positions on your map.
 
