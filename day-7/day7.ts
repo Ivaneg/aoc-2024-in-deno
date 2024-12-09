@@ -20,7 +20,6 @@ function r(
 ): boolean {
   if (idx === list.length) {
     if (total === result) {
-      //console.log(result);
       return true;
     }
     return false;
@@ -33,7 +32,6 @@ function r(
 
 function day7() {
   let total = 0;
-  let resultOk = false;
   for (let i = 0; i < result.length; i++) {
     if (r(0, values[i], 0, Number(result[i]))) {
       total += Number(result[i]);
