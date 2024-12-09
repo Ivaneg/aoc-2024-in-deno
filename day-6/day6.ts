@@ -22,13 +22,12 @@ function goTop(map: string[][], cord: coordinates, count: number): number {
     }
     if (map[i - 1][j]) {
       if (map[i - 1][j] === "#") {
-        const noMoreMoves = {
-          continue: true,
+        const blocked = {
           x: j,
           y: i,
         };
         map[i][j] = "X";
-        return goRight(map, noMoreMoves, count);
+        return goRight(map, blocked, count);
       } else {
         map[i][j] = "X";
       }
@@ -52,13 +51,12 @@ function goRight(
     }
     if (map[i][j + 1]) {
       if (map[i][j + 1] === "#") {
-        const noMoreMoves = {
-          continue: true,
+        const blocked = {
           x: j,
           y: i,
         };
         map[i][j] = "X";
-        return goDown(map, noMoreMoves, count);
+        return goDown(map, blocked, count);
       } else {
         map[i][j] = "X";
       }
@@ -82,13 +80,12 @@ function goDown(
     }
     if (map[i + 1][j]) {
       if (map[i + 1][j] === "#") {
-        const noMoreMoves = {
-          continue: true,
+        const blocked = {
           x: j,
           y: i,
         };
         map[i][j] = "X";
-        return goLeft(map, noMoreMoves, count);
+        return goLeft(map, blocked, count);
       } else {
         map[i][j] = "X";
       }
@@ -112,13 +109,12 @@ function goLeft(
     }
     if (map[i][j - 1]) {
       if (map[i][j - 1] === "#") {
-        const noMoreMoves = {
-          continue: true,
+        const blocked = {
           x: j,
           y: i,
         };
         map[i][j] = "X";
-        return goTop(map, noMoreMoves, count);
+        return goTop(map, blocked, count);
       } else {
         map[i][j] = "X";
       }
